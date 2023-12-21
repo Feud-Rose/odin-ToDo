@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+
+</head>
+<body>
+    <div class="navigation">Navigate</div>
+
+
+    <div class="content">
+        <div class="newProject">
+                <h4>New Project</h2><input type="checkbox" class="expand-btn">
+                <div class="newExpander">
+                    <div class="newProjectDiv">
+                        <form action="" id="newProjectForm">
+                            <label for="projectTitle">Title:</label>
+                            <input type="text" name="projectTitle" id="projectTitle" required>
+                            <label for="projectDescription">Description:</label>
+                            <textarea name="projectDescription" id="projectDescription" rows="4" cols="50" required></textarea>
+                            <label for="projectDue">Finish by:</label>
+                            <input type="datetime-local" name="projectDue" id="projectDue" required>
+                            <label for="projectPriority">Priority:</label>
+                            <select name="projectPriority" id="projectPriority" required>
+                            <option value="">-select-</option>
+                            <option value="1">No Rush</option>
+                            <option value="2">Standard</option>
+                            <option value="3">Urgent</option>
+                            </select>
+                            <button type="submit" class="submitProject">Add</button>
+                        </form>
+                    </div>
+                </div>
+         </div>    
+         <div class="contentContainer">
+         </div>
+    </div>
+
+    <div class="checklistContainer">
+
+    </div>
+    
+
+    <div class="widget">widget?</div>
+
+
+    <script src="bundle.js"></script>
+</body>
+</html>
