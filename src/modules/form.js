@@ -19,7 +19,7 @@ function getFormValues() {
         let description = document.getElementById("projectDescription").value
         let dueDate = document.getElementById("projectDue").value
         let priority = document.getElementById("projectPriority").value
-        let formattedDate = format(dueDate, "MM/dd/yyyy")
+        let formattedDate = format(dueDate, "yyyy/MM/dd hh:mm:ss")
         document.getElementById("newProjectForm").reset()
         let newProject = new Project(title, description, formattedDate, priority)
         return newProject

@@ -142,7 +142,7 @@ table {
 
 .contentContainer {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
     gap: 16px;
     padding: 16px;
   }
@@ -172,7 +172,7 @@ table {
   .newProjectDiv {
     display: grid;
     grid-template-rows: 25px*8;
-    gap: .2em;
+    gap: .4em;
     /* visibility: collapse; */
   
   }
@@ -202,6 +202,14 @@ table {
     background: #D0E4F5 url("./icons/chevrons-up.svg") no-repeat scroll 50% 50%;
   }
   
+
+  .projectCard {
+    box-shadow: 5px 5px 15px 5px #104240;
+    background-color: #439a86;
+  }
+
+
+
   .expand-btn:checked ~*.newExpander  {
     max-height: none;
     
@@ -214,9 +222,11 @@ table {
   }
   
   .newProject button {
-    max-width: 50px;
+    width: 50px;
     height: 24px;
-    margin: 3px auto;
+    margin: 3px 70% 3px 3px;
+  
+    
   }
   
   .checklistContainer {

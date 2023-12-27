@@ -1,5 +1,45 @@
 
 
-function displayProjects(projectObj){
-    
+export default function displayProjects(projectsArray){
+const container = document.querySelector(".contentContainer")
+for(let i=0; i < projectsArray.length; i++){
+    let obj = projectsArray[i]
+    if(obj.completed == "true"){}
+    else if(!obj.completed){ 
+    let card = document.createElement("div")
+    card.classList.add("projectCard")
+    container.appendChild(card)
+    let title = document.createElement("h5")
+    title.textContent = obj.title
+    card.appendChild(title)
+    let description = document.createElement("p")
+    description.textContent = obj.description
+    card.appendChild(description)
+    let due = document.createElement("div")
+    due.textContent = obj.due
+    card.appendChild(due)
+    let priority = document.createElement("div")
+    priority.classList.add("priority" + obj.priority)
+    priority.textContent = "priority" + obj.priority
+    card.appendChild(priority)
+    let button = document.createElement("button")
+    button.classList.add("markAsDone"+[i])
+    button.textContent = "Done"
+    button.addEventListener("click", (e) => {
+        let tar = e.target.classList[0]
+        let check = tar.split('').splice(0,10).join('')
+        let tarId = tar.split('').splice(10,1).toString() - 0
+        console.log(tarId)
+        if (check == 'markAsDone') {
+            console.log("worked")
+            projectsArray[tarId].completed = "true"
+            console.log(projectsArray)
+            let parent = e.target.parentElement
+            parent.remove()
+            localStorage.setItem('projects',JSON.stringify(projectsArray))
+        }
+    })
+    card.appendChild(button)
+    }
+}
 }
