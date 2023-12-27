@@ -60,7 +60,7 @@ function restoreProjects(projectArrayOld) {
     console.log(oldArray)
     for(let i = 0; i < oldArray.length; i++){
         let obj = oldArray[i]
-        let newObj = new Project(obj.title, obj.description, obj.due, obj.priority)
+        let newObj = new Project(obj.title, obj.description, obj.due, obj.priority, obj.completed)
         projectsArrayNew.push(newObj)
     }
     console.log(projectsArrayNew)
