@@ -1,5 +1,5 @@
 import { format, compareAsc } from "date-fns";
-import Project from "./project";
+import {Project} from "./project";
 
 export default function formEvent(){
     const newProject = document.querySelector(".newProject")
@@ -9,7 +9,7 @@ export default function formEvent(){
         if (e.target.classList == 'submitProject') {
             let newProject = getFormValues()
             console.log(newProject)
-            newProject.saveLocale()
+            newProject.addTooArray()
         }   
     })
 }
@@ -19,8 +19,8 @@ function getFormValues() {
         let description = document.getElementById("projectDescription").value
         let dueDate = document.getElementById("projectDue").value
         let priority = document.getElementById("projectPriority").value
-        let cleanDate = format(dueDate, "MM/dd/yyyy")
+        let formattedDate = format(dueDate, "MM/dd/yyyy")
         document.getElementById("newProjectForm").reset()
-        let newProject = new Project(title, description, cleanDate, priority)
+        let newProject = new Project(title, description, formattedDate, priority)
         return newProject
 }
