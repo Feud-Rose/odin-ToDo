@@ -220,14 +220,22 @@ table {
 
   .projectCard {
     box-shadow: 5px 5px 15px 5px #104240;
-    background-color: #439a86;
     padding: 8px;
     display: grid;
     grid-template-rows: 25px 50px 25px;
     grid-template-columns: 1fr 50px;
   }
 
-
+  .priority1 {
+    background-color: #9fc0b8;
+    
+  }
+  .priority2 {
+    background-color: #63b6a1;
+  }
+  .priority3 {
+    background-color: #22a785;
+  }
 
   .projectCard p {
     margin-left: 16px;

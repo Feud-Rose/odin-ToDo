@@ -72,10 +72,10 @@ function sortByDate(projectsArray) {
    projectsArray.sort((a, b) => {
     console.log(a.due, b.due)
     if (a.due < b.due) {
-        return -1
+        return 1
     }
     if (a.due > b.due) {
-        return 1
+        return -1
     }
     console.log(a.due, b.due)
     return 0
